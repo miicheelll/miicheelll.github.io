@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2b3a67;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .profile h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .profile p {
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: white;
+      background: #2b3a67;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #405baf;
+    }
+
+    .projects .project {
+      margin-bottom: 20px;
+    }
+
+    .projects h4 {
+      color: #2b3a67;
+      margin-bottom: 5px;
+    }
+
+    .projects p {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .btn {
+      text-decoration: none;
+      background: #2b3a67;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #405baf;
+    }
+
+    .certifications img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #666;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Portofolio Saya</h2>
+  <div class="container">
+
+    <!-- Box 1: Data Diri -->
+    <div class="box profile">
+      <img src="https://via.placeholder.com/150" alt="Foto Profil">
+      <h3>Nama Anda</h3>
+      <p>Posisi / Keahlian</p>
+      <p>Saya adalah seorang pengembang web yang fokus pada pembuatan aplikasi modern dan responsif.</p>
+      <div class="social-links">
+        <a href="https://github.com/username" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Box 2: Project -->
+    <div class="box projects">
+      <h3>Project</h3>
+
+      <div class="project">
+        <h4>Website Portofolio</h4>
+        <p>Website pribadi untuk menampilkan profil dan karya.</p>
+        <a href="https://github.com/username/portfolio" class="btn" target="_blank">View Project</a>
+      </div>
+
+      <div class="project">
+        <h4>Aplikasi To-Do List</h4>
+        <p>Aplikasi sederhana untuk mencatat daftar tugas harian.</p>
+        <a href="https://github.com/username/todolist" class="btn" target="_blank">View Project</a>
+      </div>
+
+    </div>
+
+    <!-- Box 3: Sertifikasi -->
+    <div class="box certifications">
+      <h3>Sertifikasi</h3>
+      <img src="https://via.placeholder.com/300x200" alt="Sertifikat">
+      <p>Belajar Pengembangan Web - Dicoding Indonesia</p>
+      <a href="https://drive.google.com/" class="btn" target="_blank">View Detail</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Nama Anda. All rights reserved.
+  </footer>
+
+  <script>
+    // Animasi muncul saat scroll (tanpa library)
+    const boxes = document.querySelectorAll('.box');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          box.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
