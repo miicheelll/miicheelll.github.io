@@ -1,201 +1,155 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: #f7f9fc;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2b3a67;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      width: 100%;
-      max-width: 900px;
-    }
-
-    .box {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.6s ease, opacity 0.6s ease;
-      opacity: 0;
-      transform: translateY(50px);
-    }
-
-    .box.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-
-    .profile h3 {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-
-    .profile p {
-      margin-bottom: 15px;
-      color: #666;
-    }
-
-    .social-links a {
-      text-decoration: none;
-      color: white;
-      background: #2b3a67;
-      padding: 8px 16px;
-      border-radius: 8px;
-      margin: 5px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      background: #405baf;
-    }
-
-    .projects .project {
-      margin-bottom: 20px;
-    }
-
-    .projects h4 {
-      color: #2b3a67;
-      margin-bottom: 5px;
-    }
-
-    .projects p {
-      margin-bottom: 10px;
-      color: #555;
-    }
-
-    .btn {
-      text-decoration: none;
-      background: #2b3a67;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #405baf;
-    }
-
-    .certifications img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      margin-top: 40px;
-      color: #666;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
+  <header class="header">
+    <a href="#" class="logo"><span>Michelle Dorani Shiba</span></a>
+    <ul class="nav-links">
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#sertificate">Sertificate</a>
+      </li>
+      <li>
+        <a href="#facts">Facts</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
 
-  <h2>Portofolio Saya</h2>
-  <div class="container">
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-    <!-- Box 1: Data Diri -->
-    <div class="box profile">
-      <img src="https://via.placeholder.com/150" alt="Foto Profil">
-      <h3>Nama Anda</h3>
-      <p>Posisi / Keahlian</p>
-      <p>Saya adalah seorang pengembang web yang fokus pada pembuatan aplikasi modern dan responsif.</p>
-      <div class="social-links">
-        <a href="https://github.com/username" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+    <button class="visit-btn" id="github-btn">Visit Github</button>
+  </header>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <img src="img/image.png" alt="">
+      <div class="info-box">
+        <div class="text">
+          <h3>Hi, I'm</h3>
+          <h1>Michelle Dorani Shiba</h1>
+          <span>Frontend Developer</span>
+        </div>
+
+        <div class="btn-group">
+          <div class="btn">Download CV</div>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+
+        <div class="socials">
+          <i class="fa-brands fa-github" id="github-icon" style="color: #0b7019;"></i>
+          <i class="fa-brands fa-linkedin" id="linkedin" style="color: #0b7019;"></i>
+        </div>
       </div>
     </div>
+  </section>
+  <hr>
 
-    <!-- Box 2: Project -->
-    <div class="box projects">
-      <h3>Project</h3>
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
 
-      <div class="project">
-        <h4>Website Portofolio</h4>
-        <p>Website pribadi untuk menampilkan profil dan karya.</p>
-        <a href="https://github.com/username/portfolio" class="btn" target="_blank">View Project</a>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>PresApp</h3>
+        <p>Student Achievement Recording and Competition Participant Recommendation Information System Using the TOPSIS, SAW, and PSI Methods</p>
+        <div class="btn-group">
+          <div class="btn" id="presapp">Github Repo</div>
+        </div>
       </div>
 
-      <div class="project">
-        <h4>Aplikasi To-Do List</h4>
-        <p>Aplikasi sederhana untuk mencatat daftar tugas harian.</p>
-        <a href="https://github.com/username/todolist" class="btn" target="_blank">View Project</a>
+      <div class="project-card">
+        <h3>Si Beta</h3>
+        <p>A digital platform designed to manage the administrative and graduation process for students’ final projects, covering document submission, academic requirement verification, and final approval before graduation.</p>
+        <div class="btn-group">
+          <div class="btn" id="sibeta">Github Repo</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>KelaNews</h3>
+        <p>A news website that provides up-to-date information, articles, and web-based updates, featuring search and category functions to make information access easier.</p>
+        <div class="btn-group">
+          <div class="btn" id="kelanews">Github Repo</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Sistem Kantin</h3>
+        <p>The canteen system is a transaction platform that uses a text-based or command-line interface as a means of interacting with the canteen sales system.</p>
+        <div class="btn-group">
+          <div class="btn" id="sistemkantin">Github Repo</div>
+        </div>
       </div>
 
     </div>
+  </section>
+  <hr>
 
-    <!-- Box 3: Sertifikasi -->
-    <div class="box certifications">
-      <h3>Sertifikasi</h3>
-      <img src="https://via.placeholder.com/300x200" alt="Sertifikat">
-      <p>Belajar Pengembangan Web - Dicoding Indonesia</p>
-      <a href="https://drive.google.com/" class="btn" target="_blank">View Detail</a>
+  <section id="sertificate" class="sertificate">
+    <h2 class="section-title">Sertificate</h2>
+    
+    <div class="sertificate-grid">
+      <div class="sertificate-card">
+        <img src="img/sertif1.jpg" alt="">
+        <h3>Junior Web Developer</h3>
+        <p>Official certificate from Digital Talent Scholarship, proving skills in modern web development and industry best practices.</p>
+        <div class="btn-group">
+          <div class="btn" id="sertif">Download Sertificate</div>
+        </div>
+      </div>
+      
     </div>
+  </section>
+  <hr>
 
-  </div>
+  <section class="contact" id="contact">
+    <div class="input-box">
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="input">
+        <input type="text" id="email" placeholder="doranimichelle@gmail.com">
+        <i class="fa-solid fa-envelope" style="color: #0b7019;"></i>
+      </div>
+
+      <div class="btn" id="submit">Submit</div>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Nama Anda. All rights reserved.
+    <ul>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#sertificate">Sertificate</a>
+      </li>
+      <li>
+        <a href="#facts">Facts</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <p class="copyright">© All Right Reserved | Michelle Dorani Shiba</p>
   </footer>
 
-  <script>
-    // Animasi muncul saat scroll (tanpa library)
-    const boxes = document.querySelectorAll('.box');
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top;
-        if (boxTop < triggerBottom) {
-          box.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
