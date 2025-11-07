@@ -223,7 +223,7 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
-     border: 2px solid black;
+    border: 2px solid black;
     gap: 1.5rem;
     border-radius: 3rem;
     cursor: pointer;
@@ -465,6 +465,11 @@ footer ul li a{
 
     .about-container img{
         width: 80vw;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 370px;
     }
 
     .input-box input{
